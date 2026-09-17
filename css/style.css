@@ -1,0 +1,103 @@
+/* ===================================================
+   Portal de Desafios Algorítmicos - E-commerce
+   CSS customizado (além do Bootstrap 5)
+   Dupla: Nicolas e Fabrício
+   =================================================== */
+
+:root {
+  --cor-principal: #2f6f4f;   /* verde - remete a "loja/confiança" */
+  --cor-principal-escura: #234f38;
+  --cor-destaque: #ff8c42;    /* laranja - botões de ação/promoção */
+  --cor-fundo-claro: #f6f8f6;
+}
+
+body {
+  background-color: var(--cor-fundo-claro);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* faz o rodapé ficar sempre no final da página */
+}
+
+/* Navbar */
+.navbar-loja {
+  background-color: var(--cor-principal);
+}
+
+.navbar-loja .navbar-brand,
+.navbar-loja .nav-link {
+  color: #ffffff;
+}
+
+.navbar-loja .nav-link.active {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* Seção de topo (hero) da página inicial */
+.hero {
+  background-color: var(--cor-principal);
+  color: #fff;
+  padding: 3rem 1rem;
+  border-radius: 0 0 20px 20px;
+}
+
+/* Cartões dos desafios na página inicial */
+.card-desafio {
+  height: 100%;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-desafio:hover {
+  transform: translateY(-5px);
+}
+
+.card-desafio .icone-desafio {
+  font-size: 2rem;
+  color: var(--cor-principal);
+}
+
+/* Caixa de resultado exibida depois de processar um cálculo */
+.caixa-resultado {
+  border: 2px dashed var(--cor-principal);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  display: none; /* só aparece depois que o JS calcula algo */
+}
+
+.caixa-resultado.mostrar {
+  display: block;
+}
+
+.btn-processar {
+  background-color: var(--cor-destaque);
+  border-color: var(--cor-destaque);
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-processar:hover {
+  background-color: #e67730;
+  border-color: #e67730;
+  color: #fff;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--cor-principal-escura);
+  color: #eee;
+  padding: 1.2rem 0;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #fff;
+}

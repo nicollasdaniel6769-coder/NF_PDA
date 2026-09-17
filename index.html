@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Desafios Algorítmicos - E-commerce</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- CSS próprio -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Menu de navegação ===== -->
+  <nav class="navbar navbar-expand-lg navbar-loja">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="bi bi-shop"></i> CompreJá E-commerce
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="desafio1.html">Carrinho</a></li>
+          <li class="nav-item"><a class="nav-link" href="desafio2.html">Cupons</a></li>
+          <li class="nav-item"><a class="nav-link" href="desafio3.html">Frete</a></li>
+          <li class="nav-item"><a class="nav-link" href="desafio4.html">Ranking</a></li>
+          <li class="nav-item"><a class="nav-link" href="desafio5.html">Relatório</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== Seção inicial (hero) ===== -->
+    <section class="hero text-center">
+      <div class="container">
+        <h1 class="display-5 fw-bold"><i class="bi bi-cart4"></i> Portal de Desafios Algorítmicos</h1>
+        <p class="lead">Tema: E-commerce — 5 problemas do dia a dia de uma loja virtual resolvidos com JavaScript</p>
+      </div>
+    </section>
+
+    <div class="container my-5">
+
+      <!-- ===== Identificação da dupla ===== -->
+      <div class="card mb-5 shadow-sm">
+        <div class="card-body">
+          <h2 class="h4 mb-3"><i class="bi bi-people-fill"></i> Identificação da Dupla</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="mb-1"><strong>Integrantes:</strong> Nicolas e Fabrício</p>
+              <p class="mb-1"><strong>Tema do projeto:</strong> E-commerce</p>
+            </div>
+            <div class="col-md-6">
+              <p class="mb-1"><strong>Curso:</strong> Técnico em Informática Integrado</p>
+              <p class="mb-1"><strong>Disciplina:</strong> Introdução à Programação para Web</p>
+              <p class="mb-1"><strong>Instituição:</strong> IFPI Campus Floriano</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Cartões dos 5 desafios ===== -->
+      <h2 class="h4 mb-4 text-center">Escolha um desafio para testar</h2>
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-desafio">
+            <div class="card-body text-center">
+              <i class="bi bi-cart-plus icone-desafio"></i>
+              <h3 class="h5 mt-2">1. Carrinho de Compras</h3>
+              <p class="text-muted">Adicione produtos e veja o total da compra ser calculado automaticamente.</p>
+              <a href="desafio1.html" class="btn btn-outline-success">Acessar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-desafio">
+            <div class="card-body text-center">
+              <i class="bi bi-tag icone-desafio"></i>
+              <h3 class="h5 mt-2">2. Aplicação de Cupons</h3>
+              <p class="text-muted">Informe o valor da compra e um cupom para calcular o desconto.</p>
+              <a href="desafio2.html" class="btn btn-outline-success">Acessar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-desafio">
+            <div class="card-body text-center">
+              <i class="bi bi-truck icone-desafio"></i>
+              <h3 class="h5 mt-2">3. Cálculo de Frete</h3>
+              <p class="text-muted">Calcule o valor do frete de acordo com o peso e a região de entrega.</p>
+              <a href="desafio3.html" class="btn btn-outline-success">Acessar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-desafio">
+            <div class="card-body text-center">
+              <i class="bi bi-trophy icone-desafio"></i>
+              <h3 class="h5 mt-2">4. Ranking de Produtos</h3>
+              <p class="text-muted">Cadastre produtos vendidos e veja o ranking do mais vendido ao menos vendido.</p>
+              <a href="desafio4.html" class="btn btn-outline-success">Acessar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-desafio">
+            <div class="card-body text-center">
+              <i class="bi bi-graph-up-arrow icone-desafio"></i>
+              <h3 class="h5 mt-2">5. Relatório de Vendas</h3>
+              <p class="text-muted">Registre vendas e gere um relatório com total arrecadado e ticket médio.</p>
+              <a href="desafio5.html" class="btn btn-outline-success">Acessar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-desafio bg-light">
+            <div class="card-body text-center">
+              <i class="bi bi-code-slash icone-desafio"></i>
+              <h3 class="h5 mt-2">Tecnologias usadas</h3>
+              <p class="text-muted mb-0">
+                <span class="badge text-bg-secondary">HTML5</span>
+                <span class="badge text-bg-secondary">CSS3</span>
+                <span class="badge text-bg-primary">Bootstrap 5</span>
+                <span class="badge text-bg-warning text-dark">JavaScript</span>
+                <span class="badge text-bg-dark">Git/GitHub</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Rodapé ===== -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">Portal de Desafios Algorítmicos &copy; 2026 - Desenvolvido por Nicolas e Fabrício</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS (necessário para o menu recolher no celular) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
