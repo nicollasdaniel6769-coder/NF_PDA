@@ -1,11 +1,5 @@
-/* ===================================================
-   Desafio 5 - Relatório de Vendas
-   =================================================== */
-
-// Vetor que guarda cada venda registrada: { produto, valorUnitario, quantidade, subtotal }
 var vendas = [];
 
-// Função chamada pelo botão "Registrar venda"
 function registrarVenda() {
   var produto = document.getElementById("nomeProdutoVenda").value.trim();
   var valorUnitario = parseFloat(document.getElementById("valorUnitarioVenda").value);
@@ -36,7 +30,6 @@ function registrarVenda() {
     subtotal: subtotal
   });
 
-  // Limpa os campos
   document.getElementById("nomeProdutoVenda").value = "";
   document.getElementById("valorUnitarioVenda").value = "";
   document.getElementById("quantidadeVenda").value = "";
@@ -44,7 +37,6 @@ function registrarVenda() {
   renderizarTabelaVendas();
 }
 
-// Desenha a tabela com todas as vendas já registradas
 function renderizarTabelaVendas() {
   var corpoTabela = document.getElementById("corpoTabelaVendas");
   corpoTabela.innerHTML = "";
@@ -66,7 +58,6 @@ function renderizarTabelaVendas() {
   }
 }
 
-// Função chamada pelo botão "Gerar relatório"
 function gerarRelatorio() {
   var caixaResultado = document.getElementById("caixaResultadoRelatorio");
 
@@ -75,20 +66,13 @@ function gerarRelatorio() {
     return;
   }
 
-  // 1) Total arrecadado: soma o subtotal de todas as vendas (laço de repetição)
   var totalArrecadado = 0;
   for (var i = 0; i < vendas.length; i++) {
     totalArrecadado += vendas[i].subtotal;
   }
 
-  // 2) Número de vendas registradas e ticket médio (média = total / quantidade de vendas)
-  var numeroDeVendas = vendas.length;
   var ticketMedio = totalArrecadado / numeroDeVendas;
 
-  // 3) Produto mais vendido em QUANTIDADE.
-  //    Como o mesmo produto pode ter sido registrado em vendas separadas,
-  //    primeiro somamos a quantidade total por nome de produto usando um objeto
-  //    (o objeto funciona como uma "tabela" nome -> quantidade acumulada).
   var totalPorProduto = {};
 
   for (var j = 0; j < vendas.length; j++) {
@@ -102,7 +86,6 @@ function gerarRelatorio() {
     }
   }
 
-  // Agora percorremos o objeto "totalPorProduto" para achar quem tem a maior quantidade
   var nomeMaisVendido = "";
   var maiorQuantidade = -1;
 
@@ -113,7 +96,6 @@ function gerarRelatorio() {
     }
   }
 
-  // Exibe tudo na tela
   document.getElementById("numeroDeVendas").textContent = numeroDeVendas;
   document.getElementById("totalArrecadado").textContent = formatarMoeda(totalArrecadado);
   document.getElementById("ticketMedio").textContent = formatarMoeda(ticketMedio);

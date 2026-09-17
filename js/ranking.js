@@ -1,12 +1,5 @@
-/* ===================================================
-   Desafio 4 - Ranking de Produtos
-   =================================================== */
-
-// Vetor (array) que vai guardar os produtos cadastrados pelo usuário.
-// Cada posição é um objeto no formato { nome: "...", quantidade: ... }
 var produtosVendidos = [];
 
-// Função chamada pelo botão "Adicionar produto"
 function adicionarProdutoRanking() {
   var nome = document.getElementById("nomeProdutoRanking").value.trim();
   var quantidade = parseInt(document.getElementById("quantidadeVendidaRanking").value);
@@ -14,7 +7,6 @@ function adicionarProdutoRanking() {
 
   mensagemErro.textContent = "";
 
-  // Validações simples com estrutura condicional
   if (nome === "") {
     mensagemErro.textContent = "Digite o nome do produto.";
     return;
@@ -24,17 +16,14 @@ function adicionarProdutoRanking() {
     return;
   }
 
-  // Adiciona o novo produto no final do array
   produtosVendidos.push({ nome: nome, quantidade: quantidade });
 
-  // Limpa os campos para o próximo cadastro
   document.getElementById("nomeProdutoRanking").value = "";
   document.getElementById("quantidadeVendidaRanking").value = "";
 
   renderizarTabelaProdutos();
 }
 
-// Mostra a tabela "crua" (na ordem em que foram cadastrados, sem ranking ainda)
 function renderizarTabelaProdutos() {
   var corpoTabela = document.getElementById("corpoTabelaProdutos");
   corpoTabela.innerHTML = "";
@@ -51,7 +40,6 @@ function renderizarTabelaProdutos() {
   }
 }
 
-// Função chamada pelo botão "Gerar ranking"
 function gerarRanking() {
   var caixaResultado = document.getElementById("caixaResultadoRanking");
   var lista = document.getElementById("listaRanking");
@@ -62,14 +50,10 @@ function gerarRanking() {
     return;
   }
 
-  // Criamos uma cópia do array para não alterar a ordem da tabela de cadastro,
-  // e ordenamos do maior para o menor número de vendas.
-  var ranking = produtosVendidos.slice(); // slice() sem argumentos copia o array
   ranking.sort(function (produtoA, produtoB) {
     return produtoB.quantidade - produtoA.quantidade; // ordem decrescente
   });
 
-  // Percorre o ranking já ordenado e monta a lista na tela
   for (var i = 0; i < ranking.length; i++) {
     var item = document.createElement("li");
     var texto = ranking[i].nome + " - " + ranking[i].quantidade + " unidades vendidas";
