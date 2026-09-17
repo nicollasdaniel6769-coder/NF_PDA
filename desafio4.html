@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 4 - Ranking de Produtos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-loja">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-shop"></i> CompreJá E-commerce</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="desafio1.html">Carrinho</a></li>
+          <li class="nav-item"><a class="nav-link" href="desafio2.html">Cupons</a></li>
+          <li class="nav-item"><a class="nav-link" href="desafio3.html">Frete</a></li>
+          <li class="nav-item"><a class="nav-link active" href="desafio4.html">Ranking</a></li>
+          <li class="nav-item"><a class="nav-link" href="desafio5.html">Relatório</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <h1 class="h3"><i class="bi bi-trophy"></i> Desafio 4 - Ranking de Produtos</h1>
+    <p class="text-muted">
+      Cadastre os produtos vendidos com a respectiva quantidade e gere o ranking do mais vendido para o menos vendido.
+    </p>
+
+    <div class="row">
+      <div class="col-md-5">
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h2 class="h6">Cadastrar produto vendido</h2>
+
+            <div class="mb-3">
+              <label for="nomeProdutoRanking" class="form-label">Nome do produto</label>
+              <input type="text" id="nomeProdutoRanking" class="form-control" placeholder="Ex: Mouse">
+            </div>
+
+            <div class="mb-3">
+              <label for="quantidadeVendidaRanking" class="form-label">Quantidade vendida</label>
+              <input type="number" id="quantidadeVendidaRanking" class="form-control" min="1" placeholder="Ex: 35">
+            </div>
+
+            <button class="btn btn-processar w-100" onclick="adicionarProdutoRanking()">
+              <i class="bi bi-plus-circle"></i> Adicionar produto
+            </button>
+
+            <p id="mensagemErroRanking" class="text-danger mt-2 mb-0"></p>
+
+            <hr>
+
+            <button class="btn btn-outline-success w-100" onclick="gerarRanking()">
+              <i class="bi bi-bar-chart-line"></i> Gerar ranking
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-7">
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h2 class="h6">Produtos cadastrados</h2>
+            <table class="table table-sm">
+              <thead>
+                <tr><th>Produto</th><th>Quantidade vendida</th></tr>
+              </thead>
+              <tbody id="corpoTabelaProdutos">
+                <tr id="linhaVaziaRanking"><td colspan="2" class="text-center text-muted">Nenhum produto cadastrado</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="caixa-resultado" id="caixaResultadoRanking">
+          <h2 class="h6">🏆 Ranking gerado</h2>
+          <ol id="listaRanking" class="mb-0"></ol>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">Portal de Desafios Algorítmicos &copy; 2026 - Desenvolvido por Nicolas e Fabrício</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/ranking.js"></script>
+</body>
+</html>
