@@ -1,12 +1,6 @@
-/* ===================================================
-   Desafio 3 - Cálculo de Frete
-   =================================================== */
-
-// Valores fixos usados na fórmula do frete
 var TAXA_FIXA = 10.00;      // valor base cobrado em qualquer entrega
 var VALOR_POR_KG = 2.00;    // valor cobrado por kg do pacote
 
-// Função chamada pelo botão "Calcular frete"
 function calcularFrete() {
   var peso = parseFloat(document.getElementById("pesoPacote").value);
   var regiao = document.getElementById("regiaoEntrega").value;
@@ -15,15 +9,12 @@ function calcularFrete() {
 
   mensagemErro.textContent = "";
 
-  // Validação do peso informado
   if (isNaN(peso) || peso <= 0) {
     mensagemErro.textContent = "Informe um peso válido (maior que zero).";
     caixaResultado.classList.remove("mostrar");
     return;
   }
 
-  // Estrutura condicional (if/else if) para definir o multiplicador
-  // e o prazo de acordo com a região escolhida
   var multiplicador;
   var prazoEmDias;
 
@@ -44,7 +35,6 @@ function calcularFrete() {
     prazoEmDias = 8;
   }
 
-  // Fórmula do frete
   var valorBase = TAXA_FIXA + (peso * VALOR_POR_KG);
   var valorFinal = valorBase * multiplicador;
 

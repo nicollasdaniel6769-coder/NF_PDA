@@ -1,13 +1,9 @@
-/* ===================================================
-   Portal de Desafios Algorítmicos - E-commerce
-   CSS customizado (além do Bootstrap 5)
-   Dupla: Nicolas e Fabrício
-   =================================================== */
+
 
 :root {
-  --cor-principal: #2f6f4f;   /* verde - remete a "loja/confiança" */
-  --cor-principal-escura: #234f38;
-  --cor-destaque: #ff8c42;    /* laranja - botões de ação/promoção */
+  --cor-principal: #f16006;
+  --cor-principal-escura: #d75708;
+  --cor-destaque: #ff8c42;
   --cor-fundo-claro: #f6f8f6;
 }
 
@@ -19,10 +15,9 @@ body {
 }
 
 main {
-  flex: 1; /* faz o rodapé ficar sempre no final da página */
+  flex: 1;
 }
 
-/* Navbar */
 .navbar-loja {
   background-color: var(--cor-principal);
 }
@@ -38,7 +33,7 @@ main {
   text-underline-offset: 6px;
 }
 
-/* Seção de topo (hero) da página inicial */
+
 .hero {
   background-color: var(--cor-principal);
   color: #fff;
@@ -46,7 +41,6 @@ main {
   border-radius: 0 0 20px 20px;
 }
 
-/* Cartões dos desafios na página inicial */
 .card-desafio {
   height: 100%;
   border: none;
@@ -63,14 +57,13 @@ main {
   color: var(--cor-principal);
 }
 
-/* Caixa de resultado exibida depois de processar um cálculo */
 .caixa-resultado {
   border: 2px dashed var(--cor-principal);
   border-radius: 10px;
   padding: 1rem;
   margin-top: 1rem;
   background-color: #ffffff;
-  display: none; /* só aparece depois que o JS calcula algo */
+  display: none; 
 }
 
 .caixa-resultado.mostrar {
@@ -85,12 +78,12 @@ main {
 }
 
 .btn-processar:hover {
-  background-color: #e67730;
-  border-color: #e67730;
+  background-color: #ff8c42;
+  border-color: #ff8c42;
   color: #fff;
 }
 
-/* Rodapé */
+
 footer {
   background-color: var(--cor-principal-escura);
   color: #eee;
